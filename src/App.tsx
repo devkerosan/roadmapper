@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ReactFlowProvider } from 'react-flow-renderer'
 import RoadmapNodeTree from './components/RoadmapNodeTree'
 
 
@@ -7,9 +8,16 @@ const App = () => {
 
 
   return (
-    <div className="">
-      <RoadmapNodeTree tree={[{ depths: 0, nodes: [{ id: 1, content: "test" }] }, { depths: 1, nodes: [{ id: 2, content: "test" }, { id: 3, content: "test" }, { id: 4, content: "test" }] }]} />
+    <div>
+      <button>test</button>
+      <div className="w-[1000px] h-[1000px]">
+        <ReactFlowProvider>
+          <RoadmapNodeTree />
+        </ReactFlowProvider>
+
+      </div>
     </div>
+
   )
 }
 
