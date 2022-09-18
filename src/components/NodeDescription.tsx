@@ -9,7 +9,7 @@ interface Props {
 const NodeDescription: React.FC<Props> = (props) => {
     return (
         <div className='w-[200px]'>
-            {props.data?.data.text}a
+            {props.data?.data.title}
         </div>
     )
 };
