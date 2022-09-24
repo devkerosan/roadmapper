@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 interface Props {
-    onClick: (url: string) => void
+    onFetchClick: (post: { url: string, title: string, image: string }) => void,
+    onDeleteClick: () => void
 }
 
 const NodeEditPanel: React.FC<Props> = (props) => {
@@ -18,11 +19,12 @@ const NodeEditPanel: React.FC<Props> = (props) => {
     }, [url])
     return (
         <div className='w-[200px]'>
+            <div onClick={props.onDeleteClick}>x</div>
             <form>
                 <label>
                     URL:
                     <input type="text" className="border" value={url} onChange={(e) => setUrl(e.target.value)} />
-                    <button type="button" onClick={() => props.onClick(url)}>Fetch</button>
+                    <button type="button" onClick={() => props.onFetchClick({ url: url, ...ogp })}>Fetch</button>
                 </label>
             </form>
 

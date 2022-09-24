@@ -13,7 +13,8 @@
     "leader-line-new": "^1.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flow-renderer": "^10.3.16"
+    "react-flow-renderer": "^10.3.16",
+    "recoil": "^0.7.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

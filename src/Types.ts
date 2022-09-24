@@ -12,6 +12,8 @@ export interface NodeDataTypes {
     id: number,
     text: string,
     url: string,
+    title: string,
+    image: string,
     onButtonClick: (data: NodeDataTypes) => void
 }
 
